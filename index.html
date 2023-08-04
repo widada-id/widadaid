@@ -30,7 +30,7 @@
     }
 
     .brand-background-color {
-        background-color: #00bf63 !important;
+        background-color: #02cd6b !important;
     }
 
     .brand-background-secondary-color {
@@ -57,23 +57,89 @@
     }
 
     .footer {
-            background-color: #000;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-        .footer a {
-            margin: 0 10px;
-            color: #fff;
-            text-decoration: none;
-            font-size: 20px;
-        }
-        .footer a:hover {
-            color: #ddd;
-        }
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .footer a {
+        margin: 0 10px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    .footer a:hover {
+        color: #ddd;
+    }
 
     a:link { text-decoration: none; }
     a:hover { text-decoration: none; color: #044305 !important;}
+
+    .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    .timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: #02cd6b;
+        left: 50%;
+        margin-left: -1.5px;
+    }
+    .timeline-item {
+        margin-bottom: 20px;
+        position: relative;
+    }
+    .timeline-item::before {
+        content: '';
+        background-color: #02cd6b;
+        position: absolute;
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        left: 50%;
+        z-index: 2;
+        margin-left: -7.5px;
+        top: 10px;
+    }
+    .timeline-item div {
+        background-color: #e2e3e5;
+        width: 50%;
+        padding: 10px;
+        border-radius: 10px;
+        position: relative;
+    }
+    .timeline-item div::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+    }
+    .timeline-item:nth-child(odd) div {
+        left: 50%;
+        text-align: right;
+    }
+    .timeline-item:nth-child(even) div {
+        left: 0;
+    }
+    .timeline-item:nth-child(odd) div::after {
+        border-width: 7px 7px 7px 0;
+        border-color: transparent #e2e3e5 transparent transparent;
+        left: -7px;
+        top: 10px;
+    }
+    .timeline-item:nth-child(even) div::after {
+        border-width: 7px 0 7px 7px;
+        border-color: transparent transparent transparent #e2e3e5;
+        right: -7px;
+        top: 10px;
+    }
 
 </style>
 <body>
@@ -87,6 +153,7 @@
                     <li class="nav-item"><a class="nav-link" href="#ebook" style="color: rgba(224,217,217,0.9);">Ebook</a></li>
                     <li class="nav-item"><a class="nav-link" href="#review" style="color: rgba(224,217,217,0.9);">Review</a></li>
                     <li class="nav-item"><a class="nav-link" href="#diskusi" style="color: rgba(224,217,217,0.9);">Diskusi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pengalaman" style="color: rgba(224,217,217,0.9);">Pengalaman</a></li>
                 </ul>
                 <p class="ms-auto navbar-text actions" style="text-align: right;"> </p>
             </div>
@@ -280,6 +347,7 @@
                 </div>
             </div>
         </div>
+
         <div id="diskusi" class="container py-4 py-xl-5">
             <section style="text-align:center; padding:50px; background-color:#f1f1f1;">
                 <h2 style="margin-bottom:20px;">Mau Diskusi?</h2>
@@ -288,10 +356,67 @@
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="height:24px; margin-right:10px; fill:white;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.2 10.2 77.3 29.6 111L0 480l117-30.6c32.5 17.7 69.6 27 107.9 27 122.4 0 222-99.6 222-222 0-59.3-23.1-115.1-66.1-157.1zm-157 341.8c-34.9 0-69.1-9-98.9-26l-7.3-4.3-69.7 18.2 18-69.2-4.8-7.5c-18.4-31.4-27.8-67-26-102.7 0-84.1 68.1-152.2 152.2-152.2 41.8 0 81.5 16.3 111.4 46.1 29.9 29.9 46.3 69.7 46.1 111.5-.3 84.1-68.4 152.2-152.2 152.2z"></path></svg>
                     Chat via WhatsApp
                 </a>
-            </section>
-            
+            </section>     
         </div>
-          
+        
+        <div id="pengalaman" class="row mb-5">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h2 class="brand-text-color" style="">Pengalaman</h2>
+                <p>Selama tujuh tahun terakhir, saya telah bekerja dalam berbagai Start Up sebagai Backend Developer, yang memungkinkan saya untuk memperoleh berbagai pengetahuan dan keterampilan.</p>
+            </div>
+        </div>
+
+        <div class="timeline container mt-5">
+            <div class="timeline-item">
+                <div>
+                    <h5>Technical Lead - Lifepack.id</h5>
+                    <p>Mar 2022 - Saat ini · 1 thn 6 bln</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div>
+                    <h5>Content Creator - BuildWith Angga</h5>
+                    <p>Apr 2020 - Saat ini · 3 thn 5 bln</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div>
+                    <h5>Back End Developer - AVANA</h5>
+                    <p>Feb 2021 - Mar 2022 · 1 thn 2 bln</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div>
+                    <h5>Back End Developer - Flokq</h5>
+                    <p>Agu 2020 - Feb 2021 · 7 bln</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div>
+                    <h5>Back End Developer - YukStay</h5>
+                    <p>Apr 2019 - Jul 2020 · 1 thn 4 bln</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div>
+                    <h5>Back End Developer - Workmate</h5>
+                    <p>Dec 2017 - Apr 2019 · 1 thn 5 bln</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div>
+                    <h5>Back End Developer - Tiket.com</h5>
+                    <p>Agu 2016 - Des 2017 · 1 thn 5 bln</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div>
+                    <h5>Full Stack Developer - Airbinder</h5>
+                    <p>Okt 2014 - Des 2015 · 1 thn 3 bln</p>
+                </div>
+            </div>
+        </div>
+
         <footer class="footer">
             <a href="https://www.instagram.com/widada.id" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://www.tiktok.com/@widada.id?lang=en" target="_blank"><i class="fab fa-tiktok"></i></a>
